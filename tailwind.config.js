@@ -6,6 +6,8 @@ export default {
   ],
   theme: {
     colors: {
+      'white': '#FFF',
+      'black': '#000',
       'mono': {
         '50': '#F7F7F7',
         '100': '#EDEDED',
@@ -85,46 +87,51 @@ export default {
         '950': '#402645',
       },
     },
-    spacing: {
-      'h': {
-        DEFAULT: '16px',
-        'between-chips': '8px',
-        'between-cards': '12px',
-        'screen-mobile': '16px',
-      },
-      'v': {
-        DEFAULT: '16px',
-        'between-options': '0px',
-        'text-to-text': '8px',
-        'text-to-component': '16px',
-        'component-to-button': '24px',
-        'between-sections': '24px',
-      },
-      fontSize: {
-        't-default': ['14px', {
-          'lineHeight': '20px', 'letterSpacing': '0.01em'
-        }],
-        't-large': ['16px', {
-          'lineHeight': '24px', 'letterSpacing': '0.0005em'
-        }],
-        't-group': ['14px', {
-          'lineHeight': '20px', 'letterSpacing': '0.0015em'
-        }],
-        't-body': ['18px', {
-          'lineHeight': '24px', 'letterSpacing': '-0.005em'
-        }],
-        't-subsection': ['22px', {
-          'lineHeight': '28px', 'letterSpacing': '-0.015em'
-        }],
-        't-section': ['26px', {
-          'lineHeight': '32px', 'letterSpacing': '-0.015em'
-        }],
-        't-screen': ['26px', {
-          'lineHeight': '32px', 'letterSpacing': '-0.015em'
-        }],
+    fontSize: {
+      't-default': ['14px', {
+        'lineHeight': '20px', 'letterSpacing': '0.01em'
+      }],
+      't-large': ['16px', {
+        'lineHeight': '24px', 'letterSpacing': '0.0005em'
+      }],
+      't-group': ['14px', {
+        'lineHeight': '20px', 'letterSpacing': '0.0015em'
+      }],
+      't-body': ['18px', {
+        'lineHeight': '24px', 'letterSpacing': '-0.005em'
+      }],
+      't-subsection': ['22px', {
+        'lineHeight': '28px', 'letterSpacing': '-0.015em'
+      }],
+      't-section': ['26px', {
+        'lineHeight': '32px', 'letterSpacing': '-0.015em'
+      }],
+      't-screen': ['26px', {
+        'lineHeight': '32px', 'letterSpacing': '-0.015em'
+      }],
+    },
+    fontFamily: {
+      stwRegular: 'Starwordy, sans-serif',
+      stwSemibold: 'Starwordy-Semibold, sans-serif',
+    },
+    extend: {
+      spacing: {
+        'h': {
+          DEFAULT: '16px',
+          'between-chips': '8px',
+          'between-cards': '12px',
+          'screen-mobile': '16px',
+        },
+        'v': {
+          DEFAULT: '16px',
+          'between-options': '0px',
+          'text-to-text': '8px',
+          'text-to-component': '16px',
+          'component-to-button': '24px',
+          'between-sections': '24px',
+        },
       },
     },
-    extend: {},
   },
   plugins: [],
 }
