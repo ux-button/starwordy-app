@@ -131,6 +131,11 @@ export default {
           'between-sections': '24px',
         },
       },
+      strokeWidth: {
+        s: '1.2px',
+        m: '1.6px',
+        l: '2px',
+      },
     },
   },
   plugins: [],
