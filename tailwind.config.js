@@ -118,7 +118,7 @@ export default {
       spacing: {
         'h': {
           DEFAULT: '16px',
-          'between-chips': '8px',
+          'betweenChips': '8px',
           'between-cards': '12px',
           'screen-mobile': '16px',
         },
