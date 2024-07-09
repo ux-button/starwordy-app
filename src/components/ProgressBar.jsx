@@ -1,18 +1,21 @@
-const ProgressBar = ({ size }) => {
+const ProgressBar = ({ size, learningCurve }) => {
     return (
-        <div className={`relative will-change-transform w-full h-2 rounded-full overflow-hidden`}>
+        <div className={`relative w-full h-${size / 4} rounded-full overflow-hidden`}>
             <svg
-                className='absolute z-10 top-0 left-0 h-4 w-2/4 fill-black'
+                className={`absolute z-10 top-0 left-0 fill-black`}
+                height={size}
+                width={`${learningCurve}0%`}
                 preserveAspectRatio="xMaxYMin slice"
-                viewBox='0 0 241 16'
+                viewBox={`0 0 241 ${size}`}
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <rect width="241" height='16' fill="black"/>
             </svg>
             <svg
-                className={`absolute z-0 top-0 left-0 h-4 w-full fill-mono-500 opacity-20`}
+                className={`absolute z-0 top-0 left-0 w-full fill-mono-500 opacity-20`}
+                height={size}
                 preserveAspectRatio="xMinYMin slice"
-                viewBox='8 0 1148 16'
+                viewBox={`8 0 1148 ${size}`}
                 xmlns="http://www.w3.org/2000/svg"
             >
             <g>
