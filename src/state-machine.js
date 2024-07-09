@@ -1,5 +1,6 @@
 const initialState = [
   {
+    id: 1,
     groupName: 'Emotions',
     words: 15,
     learningCurve: 4,
@@ -7,18 +8,52 @@ const initialState = [
     isRaised: false,
   },
   {
+    id: 2,
     groupName: 'Presentation',
     words: 13,
     learningCurve: 1,
-    isStarred: false,
-    isRaised: true,
+    isStarred: true,
+    isRaised: false,
   },
   {
+    id: 3,
     groupName: 'Music',
     words: 25,
     learningCurve: 3,
-    isStarred: true,
+    isRaised: true,
+    isStarred: false,
+  },
+  {
+    id: 4,
+    groupName: 'Human Relationship',
+    words: 4,
+    learningCurve: 1,
     isRaised: false,
+    isStarred: false,
+  },
+  {
+    id: 5,
+    groupName: 'Board Games',
+    words: 42,
+    learningCurve: 1,
+    isRaised: false,
+    isStarred: false,
+  },
+  {
+    id:6,
+    groupName: 'Interview Preparation',
+    words: 17,
+    learningCurve: 5,
+    isRaised: false,
+    isStarred: false,
+  },
+  {
+    id: 7,
+    groupName: 'Travel',
+    words: 13,
+    learningCurve: 3,
+    isRaised: false,
+    isStarred: false,
   },
 ]
 
@@ -27,3 +62,5 @@ const stateMachine = (state, action) => {
       
   }
 }
+
+export { stateMachine, initialState }

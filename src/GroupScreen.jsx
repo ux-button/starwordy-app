@@ -1,5 +1,46 @@
+import { useReducer } from "react"
+import { stateMachine, initialState } from "./state-machine"
+import { Button } from "./components/Button";
+import { Icon } from "./components/Icon";
+import { GroupCell } from "./components/GroupCell";
+
 const GroupScreen = () => {
-  
+  const [state, dispatch] = useReducer(stateMachine, initialState);
+
+  return (
+    <div className="bg-mono-200 py-4 space-y-4">
+      <div className="flex justify-between px-4 items-center">
+        <h1 className="font-stwSemibold text-t-screen">Hi, Alex</h1>
+        <div className="size-12 rounded-full bg-[url('./assets/mock-avatar.png')] bg-cover"></div>
+      </div>
+      <div className="flex gap-2 items-center px-4">
+        <Button type='primary' size='main'>
+          <Icon type='plus' style='size-6' /> Add group
+        </Button>
+        <Button type='secondary' size='main'>
+          <Icon type='clover' style='size-6' /> Smart learn
+        </Button>
+      </div>
+      <div className="px-2">
+        <div className="font-stwRegular text-t-large p-3 text-mono-600">
+          {state.length} groups
+        </div>
+        <div className="grid grid-cols-2 sm:gap-2 sm:grid-cols-3 md:grid-cols-4">
+          {state.map(group => {
+            return (
+              <GroupCell key={group.id}
+                groupName={group.groupName}
+                words={group.words}
+                learningCurve={group.learningCurve}
+                isStarred={group.isStarred}
+                isRaised={group.isRaised}
+              />
+            )
+          })}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export { GroupScreen }

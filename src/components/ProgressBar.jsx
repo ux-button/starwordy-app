@@ -4,7 +4,7 @@ const ProgressBar = ({ isDefault, learningCurve }) => {
       <svg
         className={
           isDefault
-          ? 'absolute z-10 top-0 left-0 h-2 fill-mono-300'
+          ? 'absolute z-10 top-0 left-0 h-2 fill-mono-200'
           : 'absolute z-10 top-0 left-0 h-2 fill-black'
         }
         width={`${learningCurve}0%`}

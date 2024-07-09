@@ -7,12 +7,12 @@ const Button = ({ children, type, size }) => {
   }
   const buttonSize = {
     small: 'py-1.5 px-3 text-t-default',
-    main: 'py-2 px-4 text-t-large',
+    main: 'py-2 px-3 text-t-large',
     large: 'py-4 px-6 text-t-body',
     xSize: 'py-4 px-6 text-t-subsection',
   }
   return (
-    <button className={buttonType[type] + ' ' + buttonSize[size] + ' rounded-3xl font-stwSemibold'}>
+    <button className={`${buttonType[type]} ${buttonSize[size]} rounded-3xl font-stwSemibold flex gap-1.5`}>
       {children}
     </button>
   )

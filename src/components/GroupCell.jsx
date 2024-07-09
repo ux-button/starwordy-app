@@ -1,39 +1,42 @@
 import { Icon } from "./Icon"
 import { ProgressBar } from "./ProgressBar"
 
-const GroupCell = ({ groupName, words, learningCurve, isStarred, isRaised }) => {
-  const groupType = () => {
-    switch (true) {
-      case (!isRaised && !isStarred):
-        return {
-            bg: 'bg-white',
-            starIcon: 'fill-none stroke-black opacity-40 hover:opacity-70 stroke-l size-8',
-            raiseIcon: 'fill-black size-8',
-        }
-      case (isRaised && !isStarred):
-        return {
-            bg: 'bg-lime-200',
-            starIcon: 'fill-none stroke-black opacity-40 hover:opacity-70 stroke-l size-8',
-            raiseIcon: 'fill-black size-8',
-        }
-      case (!isRaised && isStarred):
-        return {
-            bg: 'bg-daisy-200',
-            starIcon: 'fill-daisy-400 hover:fill-daisy-300 size-8',
-            raiseIcon: 'fill-black size-8',
-        }
-    }
-  }
-  
+const GroupCell = ({ groupName, words, learningCurve, isRaised, isStarred }) => {
   return (
-    <div className={`${groupType().bg} py-5 px-4 rounded-3xl space-y-2`}>
+    <div className={
+      !isRaised && !isStarred
+      ? 'bg-white py-5 px-4 rounded-3xl space-y-2'
+      : isRaised && !isStarred
+      ? 'bg-lime-200 py-5 px-4 rounded-3xl space-y-2'
+      : !isRaised && isStarred
+      ? 'bg-daisy-200 py-5 px-4 rounded-3xl space-y-2'
+      : null
+      }>
       <div className="flex justify-between">
-        <Icon type='star' style={groupType().starIcon} />
-        {!isStarred && <Icon type='rise' style={groupType().raiseIcon} />}
+        <Icon type='star' style={
+          !isRaised && !isStarred
+          ? 'fill-none stroke-whisper-900 opacity-30 hover:opacity-80 stroke-l size-8'
+          : isRaised && !isStarred
+          ? 'fill-none stroke-whisper-900 opacity-30 hover:opacity-80 stroke-l size-8'
+          : !isRaised && isStarred
+          ? 'fill-daisy-400 hover:fill-daisy-300 size-8'
+          : null
+        } />
+        {
+          !isRaised && !isStarred
+          ? <Icon type='rise' style='fill-whisper-900 opacity-10 hover:opacity-20 size-8' />
+          : isRaised && !isStarred
+          ? <Icon type='rise' style='fill-lime-600 size-8' />
+          : null
+        }
       </div>
       <div className="space-y-1 h-20">
-        <div className="font-stwSemibold text-t-subsection">{groupName}</div>
-        <div className="font-stwRegular text-t-default ">{`${words} words`}</div>
+        <div className="font-stwSemibold text-t-subsection">
+          {groupName}
+        </div>
+        <div className="font-stwRegular text-t-default text-whisper-900 opacity-70">
+          {`${words} words`}
+        </div>
       </div>
       <ProgressBar isDefault={!isRaised && !isStarred} learningCurve={learningCurve} />
     </div>
