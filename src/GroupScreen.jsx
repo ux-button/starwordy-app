@@ -1,5 +1,5 @@
 const GroupScreen = () => {
-    
+  
 }
 
 export { GroupScreen }
