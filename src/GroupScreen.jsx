@@ -3,6 +3,7 @@ import { stateMachine, initialState } from "./state-machine"
 import { Button } from "./components/Button";
 import { Icon } from "./components/Icon";
 import { GroupCell } from "./components/GroupCell";
+import { BottomSheet } from "./components/BottomSheet";
 
 const GroupScreen = () => {
   const [state, dispatch] = useReducer(stateMachine, initialState);
@@ -39,6 +40,7 @@ const GroupScreen = () => {
           })}
         </div>
       </div>
+      <BottomSheet title='Add new word' isBack={false} isClose={true}></BottomSheet>
     </div>
   )
 }

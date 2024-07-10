@@ -1,4 +1,4 @@
-const Button = ({ children, type, size }) => {
+const Button = ({ children, type, size, width }) => {
   const buttonType = {
     primary: 'bg-lime-400 hover:bg-lime-300 text-lime-950',
     secondary: 'bg-white hover:bg-mono-50 text-black',
@@ -11,8 +11,12 @@ const Button = ({ children, type, size }) => {
     large: 'py-4 px-6 text-t-body',
     xSize: 'py-4 px-6 text-t-subsection',
   }
+  const buttonWidth = {
+    full: 'w-full ite'
+  }
+
   return (
-    <button className={`${buttonType[type]} ${buttonSize[size]} rounded-3xl font-stwSemibold flex gap-1.5`}>
+    <button className={`${buttonType[type]} ${buttonSize[size]} ${buttonWidth[width]} rounded-3xl font-stwSemibold flex justify-center gap-1.5`}>
       {children}
     </button>
   )
