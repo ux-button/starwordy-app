@@ -1,13 +1,17 @@
-import { Button } from "./Button"
-import { TitleNavigation } from "./TitleNavigation"
+import { Button } from './Button';
+import { TitleNavigation } from './TitleNavigation';
 
 const BottomSheet = ({ children, title, isBack, isClose }) => {
   return (
-    <div className="p-4 w-full">
-      <TitleNavigation isBack={isBack} isClose={isClose}>{title}</TitleNavigation>
-      <Button type='primary' size='large' width='full'>Save</Button>
+    <div className="w-full p-4">
+      <TitleNavigation isBack={isBack} isClose={isClose}>
+        {title}
+      </TitleNavigation>
+      <Button type="primary" size="large" width="full">
+        Save
+      </Button>
     </div>
-  )
-}
+  );
+};
 
-export { BottomSheet }
+export { BottomSheet };
