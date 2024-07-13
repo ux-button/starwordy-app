@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BasicIcon } from './BasicIcons';
 
-const Input = ({ children, title, placeholder }) => {
+const Input = ({ title, placeholder }) => {
   const [input, setInput] = useState('');
 
   const handleChange = (value) => {

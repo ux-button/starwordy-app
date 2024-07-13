@@ -1,10 +1,10 @@
 import { BasicIcon } from '../components/BasicIcons';
 
-const TitleNavigation = ({ children, isBack, isClose }) => {
+const TitleNavigation = ({ children, isLeft, isRight, onClickRight }) => {
   return (
     <div className="flex justify-between font-stwSemibold text-t-section">
       <div className="size-6">
-        {isBack && (
+        {isLeft && (
           <BasicIcon
             type="arrowLeft"
             style="size-6 fill-none stroke-m stroke-black"
@@ -12,8 +12,8 @@ const TitleNavigation = ({ children, isBack, isClose }) => {
         )}
       </div>
       {children}
-      <div className="size-6">
-        {isClose && (
+      <div onClick={onClickRight} className="size-6">
+        {isRight && (
           <BasicIcon
             type="basicCross"
             style="size-6 fill-none stroke-m stroke-black"

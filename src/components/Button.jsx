@@ -1,4 +1,4 @@
-const Button = ({ children, type, size, width }) => {
+const Button = ({ children, type, size, width, onClick }) => {
   const buttonType = {
     primary: 'bg-lime-400 hover:bg-lime-300 text-lime-950',
     secondary: 'bg-white hover:bg-mono-50 text-black',
@@ -17,6 +17,7 @@ const Button = ({ children, type, size, width }) => {
 
   return (
     <button
+      onClick={onClick}
       className={`${buttonType[type]} ${buttonSize[size]} ${buttonWidth[width]} flex justify-center gap-1.5 rounded-3xl font-stwSemibold`}
     >
       {children}
