@@ -47,7 +47,7 @@ const groups = [
     learningCurve: 3,
     isStarred: false,
     isHighed: false,
-  }
-]
+  },
+];
 
-export { groups }
+export { groups };

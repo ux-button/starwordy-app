@@ -1,15 +1,15 @@
-import { useReducer } from "react";
-import { stateMachine, initialState } from "./state-machine";
-import { Button } from "./components/Button";
-import { Icon } from "./components/Icon";
-import { GroupCell } from "./components/GroupCell";
-import { BottomSheet } from "./components/BottomSheet";
+import { useReducer } from 'react';
+import { stateMachine, initialState } from './state-machine';
+import { Button } from './components/Button';
+import { Icon } from './components/Icon';
+import { GroupCell } from './components/GroupCell';
+import { BottomSheet } from './components/BottomSheet';
 
 const GroupScreen = () => {
   const [state, dispatch] = useReducer(stateMachine, initialState);
 
   return (
-    <div className="space-y-4 bg-mono-200 py-4">
+    <div className="space-y-4 bg-mono-200 pt-4">
       <div className="flex items-center justify-between px-4">
         <h1 className="font-stwSemibold text-t-screen">Hi, Alex</h1>
         <div className="size-12 rounded-full bg-[url('./assets/mock-avatar.png')] bg-cover"></div>

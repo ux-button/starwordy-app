@@ -1,4 +1,4 @@
-import { BasicIcon } from "./BasicIcons";
+import { BasicIcon } from '../components/BasicIcons';
 
 const TitleNavigation = ({ children, isBack, isClose }) => {
   return (

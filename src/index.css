@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Starwordy';
-        src: url('./fonts/SF-Pro-Display-Regular.woff2');
-        font-weight: normal;
-    }
-    @font-face {
-        font-family: 'Starwordy-Semibold';
-        src: url('./fonts/SF-Pro-Display-Semibold.woff2');
-        font-weight: normal;
-    }
+  @font-face {
+    font-family: 'Starwordy';
+    src: url('./fonts/SF-Pro-Display-Regular.woff2');
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'Starwordy-Semibold';
+    src: url('./fonts/SF-Pro-Display-Semibold.woff2');
+    font-weight: normal;
+  }
 }

@@ -40,7 +40,7 @@ const initialState = [
     isStarred: false,
   },
   {
-    id:6,
+    id: 6,
     groupName: 'Interview Preparation',
     words: 17,
     learningCurve: 5,
@@ -55,12 +55,13 @@ const initialState = [
     isRaised: false,
     isStarred: false,
   },
-]
+];
 
 const stateMachine = (state, action) => {
   switch (action) {
-      
+    case 'addNewWord':
+      return {};
   }
-}
+};
 
-export { stateMachine, initialState }
+export { stateMachine, initialState };
