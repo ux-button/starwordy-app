@@ -1,5 +1,5 @@
 const initialState = {
-  isModal: false,
+  isModal: true,
   allGroups: [
     {
       id: 1,

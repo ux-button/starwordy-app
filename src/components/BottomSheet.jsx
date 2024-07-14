@@ -18,9 +18,6 @@ const BottomSheet = ({ children, title, isLeft, isRight, onClickRight }) => {
           </div>
           {children}
         </div>
-        <Button type="primary" size="large" width="full">
-          Save
-        </Button>
       </div>
     </>
   );

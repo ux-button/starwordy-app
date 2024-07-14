@@ -27,11 +27,14 @@ const GroupScreen = () => {
       {state.isModal ? (
         <BottomSheet
           onClickRight={hanleModalClose}
-          title="Add new word"
+          title="Add group"
           isLeft={false}
           isRight={true}
         >
           <InputText title="Group" placeholder="Enter group name" />
+          <Button type="primary" size="large" width="full">
+            Save
+          </Button>
         </BottomSheet>
       ) : null}
       <MenuTitle title="Hi, Alex" />
