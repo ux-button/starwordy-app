@@ -2,7 +2,7 @@ import { GroupCell } from '../components/GroupCell';
 
 const GroupList = ({ groups }) => {
   return (
-    <section className="px-2">
+    <>
       <div className="p-3 font-stwRegular text-t-large text-mono-600">
         {groups.length} groups
       </div>
@@ -20,7 +20,7 @@ const GroupList = ({ groups }) => {
           );
         })}
       </div>
-    </section>
+    </>
   );
 };
 

@@ -23,7 +23,7 @@ const GroupScreen = () => {
   };
 
   return (
-    <div className="h-screen space-y-4 bg-mono-200 pt-4">
+    <div className="h-screen bg-mono-200">
       {state.isModal ? (
         <BottomSheet
           onClickRight={hanleModalClose}
@@ -37,16 +37,20 @@ const GroupScreen = () => {
           </Button>
         </BottomSheet>
       ) : null}
-      <MenuTitle title="Hi, Alex" />
-      <section className="flex items-center gap-2 px-4">
-        <Button onClick={hanleModalOpen} type="primary" size="main">
-          <Icon type="plus" style="size-6" /> Add group
-        </Button>
-        <Button type="secondary" size="main">
-          <Icon type="clover" style="size-6" /> Smart learn
-        </Button>
+      <section className="space-y-4 px-4 py-4">
+        <MenuTitle title="Hi, Alex" />
+        <section className="flex items-center gap-2">
+          <Button onClick={hanleModalOpen} type="primary" size="main">
+            <Icon type="plus" style="size-6" /> Add group
+          </Button>
+          <Button type="secondary" size="main">
+            <Icon type="clover" style="size-6" /> Smart learn
+          </Button>
+        </section>
       </section>
-      <GroupList groups={state.allGroups} />
+      <section className="bg-mono-200 px-2">
+        <GroupList groups={state.allGroups} />
+      </section>
     </div>
   );
 };

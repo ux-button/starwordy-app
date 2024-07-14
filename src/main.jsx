@@ -7,6 +7,6 @@ import { WordsInGroupScreen } from './layouts/WordsInGroupScreen';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <WordsInGroupScreen />
+    <GroupScreen />
   </React.StrictMode>,
 );

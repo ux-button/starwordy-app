@@ -49,6 +49,7 @@ const WordsInGroupScreen = () => {
           </section>
         </BottomSheet>
       ) : null}
+
       <section className="space-y-4 px-4 py-4">
         <MenuTitle title="Travel" />
         <section className="flex items-center gap-2">
