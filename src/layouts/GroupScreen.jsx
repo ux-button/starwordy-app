@@ -1,11 +1,11 @@
 import { useReducer } from 'react';
-import { stateMachine, initialState } from './state-machine';
-import { Button } from './components/Button';
-import { Icon } from './components/Icon';
-import { BottomSheet } from './components/BottomSheet';
-import { InputText } from './components/InputText';
-import { GroupList } from './compositions/GroupList';
-import { MenuTitle } from './compositions/MenuTitle';
+import { stateMachine, initialState } from '../state-machine';
+import { Button } from '../components/Button';
+import { Icon } from '../components/Icon';
+import { BottomSheet } from '../components/BottomSheet';
+import { InputText } from '../components/InputText';
+import { GroupList } from '../compositions/GroupList';
+import { MenuTitle } from '../compositions/MenuTitle';
 
 const GroupScreen = () => {
   const [state, dispatch] = useReducer(stateMachine, initialState);
