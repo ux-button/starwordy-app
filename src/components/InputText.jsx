@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BasicIcon } from './BasicIcons';
 
-const Input = ({ title, placeholder }) => {
+const InputText = ({ title, placeholder }) => {
   const [input, setInput] = useState('');
 
   const handleChange = (value) => {
@@ -39,4 +39,4 @@ const Input = ({ title, placeholder }) => {
   );
 };
 
-export { Input };
+export { InputText };
