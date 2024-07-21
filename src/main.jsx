@@ -9,6 +9,6 @@ import { FlipcardsPage } from './features/flipcards/containers/FlipcardsPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FlipcardsPage />
+    <GroupsListPage />
   </React.StrictMode>,
 );

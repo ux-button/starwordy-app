@@ -9,6 +9,7 @@ const InputText = ({ title, placeholder }) => {
       <input
         className="w-full rounded-3xl border-0 bg-whisper-50 p-4 pt-9 text-t-subsection caret-lime-400 outline-none placeholder:text-mono-300 hover:bg-whisper-100 focus:bg-whisper-200"
         type="text"
+        name={title}
         value={text}
         onChange={(e) => handleInputChange(e.target.value)}
         placeholder={placeholder}
