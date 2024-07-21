@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
-import { stateMachine, initialState } from './groupsPageSlice';
+import { stateMachine, initialState } from './wordsPageSlice';
 
-const useGroupListPage = () => {
+const useWordsListPage = () => {
   const [state, dispatch] = useReducer(stateMachine, initialState);
 
   const hanleModalOpen = () => {
@@ -19,4 +19,4 @@ const useGroupListPage = () => {
   return { state, hanleModalOpen, hanleModalClose };
 };
 
-export { useGroupListPage };
+export { useWordsListPage };

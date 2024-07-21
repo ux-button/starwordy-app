@@ -26,7 +26,7 @@ const GroupsListPage = () => {
         </div>
       </section>
       <section className="bg-mono-200 px-2">
-        <GroupList groups={state.allGroups} />
+        <GroupList groups={state.groups} />
       </section>
     </div>
   );

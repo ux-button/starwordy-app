@@ -1,6 +1,6 @@
 const initialState = {
   isModal: false,
-  allGroups: [
+  groups: [
     {
       id: 1,
       groupName: 'Emotions',

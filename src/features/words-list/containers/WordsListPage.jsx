@@ -1,54 +1,19 @@
-import { randomWords } from '../../../mocksData';
-import { useReducer, useState } from 'react';
+// Shared components
 import { MenuTitle } from '../../../shared/components/moleculas/MenuTitle';
 import { Button } from '../../../shared/components/atoms/Button';
 import { Icon } from '../../../shared/components/atoms/icon/Icon';
+
+// Words objects
 import { WordList } from '../components/WordList';
-import { stateMachine, initialState } from '../../../state-machine';
-import { BottomSheet } from '../../../shared/components/moleculas/BottomSheet';
-import { InputText } from '../../../shared/components/atoms/input-text/InputText';
+import { WordAddModal } from '../components/WordAddModal';
+import { useWordsListPage } from './useWordsListPage';
 
 const WordsListPage = () => {
-  const [words, setWords] = useState(randomWords);
-  const [state, dispatch] = useReducer(stateMachine, initialState);
-
-  const hanleModalOpen = () => {
-    dispatch({
-      type: 'openModal',
-    });
-  };
-
-  const hanleModalClose = () => {
-    dispatch({
-      type: 'closeModal',
-    });
-  };
+  const { state, hanleModalOpen, hanleModalClose } = useWordsListPage();
 
   return (
     <div className="h-screen bg-mono-200">
-      {state.isModal ? (
-        <BottomSheet
-          onClickRight={hanleModalClose}
-          title="Add new word"
-          isLeft={false}
-          isRight={true}
-        >
-          <div className="space-0">
-            <InputText title="Word" placeholder="Enter word" />
-            <InputText title="Definition" placeholder="Enter definition" />
-          </div>
-          <section className="flex justify-between">
-            <Button type="ghost" size="large" width="full">
-              Save
-            </Button>
-            <Button type="primary" size="large" width="full">
-              <Icon type="plus" style="size-6 fill-black" />
-              One more
-            </Button>
-          </section>
-        </BottomSheet>
-      ) : null}
-
+      <WordAddModal state={state} hanleModalClose={hanleModalClose} />
       <section className="space-y-4 px-4 py-4">
         <MenuTitle title="Travel" />
         <section className="flex items-center gap-2">
@@ -66,7 +31,7 @@ const WordsListPage = () => {
         </section>
       </section>
       <section className="bg-mono-200 px-2">
-        <WordList words={words} />
+        <WordList words={state.words} />
       </section>
     </div>
   );
