@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import { GroupScreen } from './layouts/GroupScreen';
-import { WordsInGroupScreen } from './layouts/WordsInGroupScreen';
+import { GroupsListPage } from './features/groups-list/containers/groups-list-page/GroupsListPage';
+import { ComponentsLibrary } from './layouts/ComponentsLibrary';
+import { WordsListPage } from './features/words-list/containers/WordsListPage';
+import { FlipcardsPage } from './features/flipcards/containers/FlipcardsPage';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GroupScreen />
+    <FlipcardsPage />
   </React.StrictMode>,
 );

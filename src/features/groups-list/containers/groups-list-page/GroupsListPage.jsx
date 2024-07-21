@@ -1,13 +1,16 @@
 import { useReducer } from 'react';
-import { stateMachine, initialState } from '../state-machine';
-import { Button } from '../components/Button';
-import { Icon } from '../components/Icon';
-import { BottomSheet } from '../components/BottomSheet';
-import { InputText } from '../components/InputText';
-import { GroupList } from '../compositions/GroupList';
-import { MenuTitle } from '../compositions/MenuTitle';
+import { stateMachine, initialState } from '../../../../state-machine';
 
-const GroupScreen = () => {
+// Shared components
+import { Button } from '../../../../shared/components/atoms/Button';
+import { Icon } from '../../../../shared/components/atoms/icon/Icon';
+import { InputText } from '../../../../shared/components/atoms/input-text/InputText';
+
+import { BottomSheet } from '../../../../shared/components/moleculas/BottomSheet';
+import { GroupList } from '../../components/GroupList';
+import { MenuTitle } from '../../../../shared/components/moleculas/MenuTitle';
+
+const GroupsListPage = () => {
   const [state, dispatch] = useReducer(stateMachine, initialState);
 
   const hanleModalOpen = () => {
@@ -55,4 +58,4 @@ const GroupScreen = () => {
   );
 };
 
-export { GroupScreen };
+export { GroupsListPage };

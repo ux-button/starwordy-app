@@ -4,6 +4,8 @@ const Button = ({ children, type, size, width, onClick }) => {
     secondary: 'bg-white hover:bg-mono-50 text-black',
     tertary: 'bg-whisper-50 hover:bg-whisper-200 text-whisper-900',
     shadow: 'bg-transparent text-black hover:text-mono-950',
+    positive: 'bg-malahit-400 hover:bg-malahit-300 text-malahit-800',
+    disable: 'bg-transparent text-mono-600 hover:text-mono-500',
   };
   const buttonSize = {
     small: 'py-1.5 px-3 text-t-default',

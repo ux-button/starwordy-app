@@ -1,4 +1,4 @@
-import { WordCell } from '../components/WordCell';
+import { WordCell } from './WordCell';
 
 const WordList = ({ words }) => {
   return (

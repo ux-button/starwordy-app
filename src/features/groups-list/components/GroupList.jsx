@@ -1,4 +1,4 @@
-import { GroupCell } from '../components/GroupCell';
+import { GroupCell } from './GroupCell';
 
 const GroupList = ({ groups }) => {
   return (

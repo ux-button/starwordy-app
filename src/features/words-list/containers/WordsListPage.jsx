@@ -1,16 +1,15 @@
-import { randomWords } from '../mocksData';
+import { randomWords } from '../../../mocksData';
 import { useReducer, useState } from 'react';
-import { MenuTitle } from '../compositions/MenuTitle';
-import { Button } from '../components/Button';
-import { Icon } from '../components/Icon';
-import { WordList } from '../compositions/WordList';
-import { stateMachine, initialState } from '../state-machine';
-import { BottomSheet } from '../components/BottomSheet';
-import { InputText } from '../components/InputText';
+import { MenuTitle } from '../../../shared/components/moleculas/MenuTitle';
+import { Button } from '../../../shared/components/atoms/Button';
+import { Icon } from '../../../shared/components/atoms/icon/Icon';
+import { WordList } from '../components/WordList';
+import { stateMachine, initialState } from '../../../state-machine';
+import { BottomSheet } from '../../../shared/components/moleculas/BottomSheet';
+import { InputText } from '../../../shared/components/atoms/input-text/InputText';
 
-const WordsInGroupScreen = () => {
+const WordsListPage = () => {
   const [words, setWords] = useState(randomWords);
-
   const [state, dispatch] = useReducer(stateMachine, initialState);
 
   const hanleModalOpen = () => {
@@ -73,4 +72,4 @@ const WordsInGroupScreen = () => {
   );
 };
 
-export { WordsInGroupScreen };
+export { WordsListPage };

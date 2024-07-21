@@ -1,8 +1,8 @@
-import { BasicIcon } from '../components/BasicIcons';
+import { BasicIcon } from '../atoms/icon/BasicIcons';
 
 const TitleNavigation = ({ children, isLeft, isRight, onClickRight }) => {
   return (
-    <div className="flex justify-between font-stwSemibold text-t-section">
+    <div className="flex items-center justify-between p-4 font-stwSemibold text-t-section">
       <div className="size-6">
         {isLeft && (
           <BasicIcon

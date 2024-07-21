@@ -1,4 +1,4 @@
-import { Icon } from './Icon';
+import { Icon } from '../../../shared/components/atoms/icon/Icon';
 
 const WordCell = ({ word, definition, isStarred, isRaised, isCompleted }) => {
   return (

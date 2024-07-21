@@ -1,5 +1,5 @@
-import { Icon } from './Icon';
-import { ProgressBar } from './ProgressBar';
+import { Icon } from '../../../shared/components/atoms/icon/Icon';
+import { ProgressBar } from '../../../shared/components/atoms/ProgressBar';
 
 const GroupCell = ({
   groupName,

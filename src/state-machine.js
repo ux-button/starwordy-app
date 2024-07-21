@@ -1,5 +1,5 @@
 const initialState = {
-  isModal: true,
+  isModal: false,
   allGroups: [
     {
       id: 1,
@@ -51,6 +51,22 @@ const initialState = {
     },
     {
       id: 7,
+      groupName: 'Travel',
+      words: 13,
+      learningCurve: 3,
+      isRaised: false,
+      isStarred: false,
+    },
+    {
+      id: 8,
+      groupName: 'Travel',
+      words: 13,
+      learningCurve: 3,
+      isRaised: false,
+      isStarred: false,
+    },
+    {
+      id: 9,
       groupName: 'Travel',
       words: 13,
       learningCurve: 3,
